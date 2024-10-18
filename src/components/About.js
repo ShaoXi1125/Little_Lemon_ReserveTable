@@ -3,6 +3,7 @@ import Restaurant from "../components/assets/restaurant.13306fcaa4576f20fd42.jpg
 import Chef from "../components/assets/Mario and Adrian b.6ba0e06bfa9c1ea75109.jpg"
 import './styles/About.css'; // Create this CSS file to style your component
 
+
 const AboutUs = () => {
   return (
     <div  className="about-us-container">
@@ -19,17 +20,17 @@ const AboutUs = () => {
         </p>
       </div>
       <div className="about-us-images">  
-  <img  
-    src={Restaurant}  
-    alt="Restaurant ambiance"  
-    className="about-us-image restaurant-image"   
-  />   
-  <img  
-    src={Chef}  
-    alt="Restaurant chefs"  
-    className="about-us-image chef-image"   
-  />   
-</div>  
+          <img  
+            src={Restaurant}  
+            alt="Restaurant ambiance"  
+            className="about-us-image restaurant-image"   
+          />   
+          <img  
+            src={Chef}  
+            alt="Restaurant chefs"  
+            className="about-us-image chef-image"   
+          />   
+        </div>  
     </div>
   );
 };

@@ -59,3 +59,15 @@
   right: 0;
   z-index: 1;
 }
+
+
+@media (max-width: 768px) {
+  .about-us-images {
+    display: none;
+  }
+
+  .about-us-content {
+    flex: 1 1 100%;
+    text-align: center;
+  }
+}

@@ -5,6 +5,8 @@ import Reservations from "./routes/Reservations";
 import OrderOnline from "./routes/OrderOnline";
 import Login from "./routes/Login";
 
+
+//import 'bootstrap/dist/css/bootstrap.min.css';
 import {Route, Routes} from "react-router-dom";
 
 function App() {
