@@ -39,10 +39,10 @@ function ReservationsContent() {
         if (formData.telephone === "") {
             err.telephone = "* Phone number required!" 
         }else{
-            let phoneRegex = /^(?:(?:\(?(?:00|\+)([1-4]\d\d|[1-9]\d+)\)?)[\-\.\ \\\/]?)?((?:\(?\d{1,}\)?[\-\.\ \\\/]?)+)(?:[\-\.\ \\\/]?(?:#|ext\.?|extension|x)[\-\.\ \\\/]?(\d+))?$/i
-            if(!phoneRegex.test(formData.telephone)) {
-                err.telephone = "Telephone number not valid!"
-            }
+            // let phoneRegex = /^(?:\+?60|0)(?:1[0-9]{1}-?[0-9]{7,8}|[3-9][0-9]-?[0-9]{7})$/;
+            // if(!phoneRegex.test(formData.telephone)) {
+            //     err.telephone = "Telephone number not valid!"
+            // }
         }
 
 
