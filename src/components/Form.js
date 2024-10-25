@@ -10,7 +10,7 @@ const schema = yup.object({
     telephone: yup.string().required("Telephone is a required field!").matches(/^(?:\+60[1-9][0-9]{1,2}\s?\d{3}\s?\d{4}|01[0-9]\s?\d{3}\s?\d{4})$/, "Phone number must match the format +60 1X XXX XXXX or 01X XXX XXXX"),
     guests: yup.number().min(1, "There must be at least 1 guest!").required("Please specify number of guests per table!"),
     date: yup.date()
-    .min(new Date(), "Please select a date and time after now!") // 不能选择现在及之前的时间
+    .min(new Date(), "Please select a date and time after now!") 
     .min(new Date(new Date().getTime() + 2 * 60 * 60 * 1000), "Please select a date and time at least 2 hours from now!")
     .required("Please select date and time!"),
 });

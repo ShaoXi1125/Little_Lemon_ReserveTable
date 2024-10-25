@@ -16,8 +16,7 @@ db_config = {
 }
 
 def get_db_connection():
-    return mysql.connector.connect(**db_config)  # 使用 db_config
-
+    return mysql.connector.connect(**db_config) 
 @app.route('/api/reservations', methods=['POST'])
 def create_reservation():
     data = request.get_json() 
@@ -30,20 +29,17 @@ def create_reservation():
         connection = get_db_connection() 
         cursor = connection.cursor()
 
-        # 去掉毫秒部分和 Z 表示的 UTC 时间
-        date_str = data['date'].replace("Z","")  # 移除末尾的 Z
+      
+        date_str = data['date'].replace("Z","") 
 
-        # 解析日期字符串为 datetime 对象
-        date_object = datetime.fromisoformat(date_str)  # 转换为 datetime 对象
+        date_object = datetime.fromisoformat(date_str)
         
-        # 格式化为 MySQL 所需的格式
-        local_tz = pytz.timezone('Asia/Kuala_Lumpur')  # 设定为马来西亚时区
-        date_object = local_tz.localize(date_object)  # 将本地时间设定为当地时区
+
+        local_tz = pytz.timezone('Asia/Kuala_Lumpur') 
+        date_object = local_tz.localize(date_object) 
 
         formatted_date = date_object.strftime('%Y-%m-%d %H:%M:%S')
 
-
-        # SQL 插入语句
         query = "INSERT INTO reservations (name, email, telephone, guests, occasion, date) VALUES (%s, %s, %s, %s, %s, %s)"
         cursor.execute(query, (
             data['name'],
@@ -51,7 +47,7 @@ def create_reservation():
             data['telephone'],
             data['guests'],
             data.get('occasion'),
-            formatted_date  # 使用格式化后的日期字符串
+            formatted_date 
         ))
         
         connection.commit()
