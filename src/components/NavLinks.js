@@ -50,11 +50,11 @@ const NavLinks = (props) => {
           transition={{ delay: 0.30 }}
           onClick={() => props.isMobile && props.closeMobileMenu()}
         >
-          <div>
-            <span onClick={toggleDropdown}>{userName}</span>
+          <div class='dropdown'>
+            <span className="dropdown-toggle" onClick={toggleDropdown}>{userName}</span>
             {dropdownVisible && (
-              <div className="dropdown-menu">
-                <button onClick={handleLogout}>Logout</button>
+              <div className="dropdown-content">
+                <a onClick={handleLogout}>Logout</a>
               </div>
             )}
           </div>

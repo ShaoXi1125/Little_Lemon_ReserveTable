@@ -26,9 +26,10 @@ function LoginForm() {
     
             const result = await response.json();
             if (response.ok) {
-                localStorage.setItem('userName', result.userName);
+                // 使用 result.name 而不是 result.userName
+                localStorage.setItem('userName', result.name);
                 alert(result.message); // Success message
-                window.location.href = '/'; 
+                window.location.href = '/'; // 登录成功后重定向到主页
             } else {
                 alert('Error: ' + result.message); 
             }
@@ -38,20 +39,17 @@ function LoginForm() {
         }
     };
 
-    
-    
-
     return (
         <form onSubmit={handleSubmit(formSubmit)}>
             <fieldset>
                 <div className="field">
                     <label htmlFor="email">Email</label>
-                    <input type="text" placeholder="text@email.com" name="email" {...register("email")}/>
+                    <input type="text" placeholder="text@email.com" name="email" {...register("email")} />
                     <span className="error-message">{errors.email?.message}</span>
                 </div>
                 <div className="field">
                     <label htmlFor="pass">Password</label>
-                    <input type="password" placeholder="Password" name="pass" {...register("pass")}/>
+                    <input type="password" placeholder="Password" name="pass" {...register("pass")} />
                     <span className="error-message">{errors.pass?.message}</span>
                 </div>
                 <button className="reserve-btn" type="submit">Login</button>

@@ -19,7 +19,36 @@
     color: #495e57
 }
 
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
 
+.dropdown-toggle {
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 5px; /* Rounded corners */
+}
+
+.dropdown-content {
+    display: block;
+    position: absolute;
+    background-color: white; /* White background for dropdown */
+    min-width: 160px; /* Minimum width of dropdown */
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2); /* Shadow effect */
+    z-index: 1; /* Ensure dropdown is above other elements */
+}
+
+.dropdown-content a {
+    color: black; /* Black text */
+    padding: 12px 16px; /* Padding for links */
+    text-decoration: none; /* Remove underline */
+    display: block; /* Make links block elements */
+}
+
+.dropdown-content a:hover {
+    background-color: #f1f1f1; /* Change background on hover */
+}
 
 @media screen and (max-width: 1024px) {
     .navigation {

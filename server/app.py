@@ -103,14 +103,14 @@ def login_user():
     cursor = connection.cursor(dictionary=True)
     
     try:
-        # Query to find user by email
+        # 查询用户
         query = "SELECT * FROM Customer WHERE email = %s"
         cursor.execute(query, (data['email'],))
         user = cursor.fetchone()
 
-        # Verify password
+        # 验证密码
         if user and bcrypt.check_password_hash(user['password'], data['pass']):
-            return jsonify({"message": "Login successful!"}), 200
+            return jsonify({"message": "Login successful!", "name": user['name']}), 200
         else:
             return jsonify({"message": "Invalid email or password!"}), 401
 

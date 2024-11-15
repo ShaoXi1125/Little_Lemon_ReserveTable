@@ -42,21 +42,7 @@
     background-color: #d32f2f;
   }
   
-  .dropdown-menu {
-    position: absolute;
-    background-color: white;
-    border: 1px solid #ddd;
-    padding: 10px;
-    top: 30px;
-    right: 0;
-    width: 150px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  }
-  
-  .dropdown-menu button {
-    width: 100%;
-    text-align: left;
-  }
+ 
 
 @media screen and (max-width: 1024px) {
     .header-wrapper {
