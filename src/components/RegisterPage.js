@@ -13,8 +13,8 @@ function RegisterPage() {
                 <p>Book a table with us to share in this experience.</p>
             </div>
             <div className="form">
-                <h1>Reserve a Table</h1>
-                <p>Please fill in and submit form to book your reservation at Little Lemon.</p>
+                <h1>Register Form</h1>
+                <p>Please fill in and submit form to Join a member at Little Lemon.</p>
                 
                 <RegisterForm />
                 

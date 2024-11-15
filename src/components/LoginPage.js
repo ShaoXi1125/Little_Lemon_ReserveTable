@@ -15,8 +15,8 @@ function LoginPage() {
                 <p>Book a table with us to share in this experience.</p>
             </div>
             <div className="form">
-                <h1>Reserve a Table</h1>
-                <p>Please fill in and submit form to book your reservation at Little Lemon.</p>
+                <h1>Login</h1>
+                <p>Please Login and submit form to book your reservation at Little Lemon.</p>
                 
                 <LoginForm />
                 
